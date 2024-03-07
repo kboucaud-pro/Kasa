@@ -1,0 +1,20 @@
+@import "./_header.scss";
+@import "./_footer.scss";
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 1000px;
+
+	.error-id {
+		color: #FF6060;
+		font-size: 280px;
+	} 
+
+	.error-text {
+		color: #FF6060;
+		font-size: 36px;
+	}
+}

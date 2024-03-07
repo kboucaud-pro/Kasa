@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+header .header-links {
+  font-size: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 25%;
+  color: black;
+}
+header .header-links .header-link:hover {
+  -webkit-text-decoration: underline 1px black;
+          text-decoration: underline 1px black;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 200px;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 1000px;
+}
+.content .error-id {
+  color: #FF6060;
+  font-size: 280px;
+}
+.content .error-text {
+  color: #FF6060;
+  font-size: 36px;
+}/*# sourceMappingURL=error.css.map */

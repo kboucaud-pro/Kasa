@@ -1,0 +1,9 @@
+@import "./_header.scss";
+@import "./_footer.scss";
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}

@@ -1,0 +1,23 @@
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	margin-bottom: 50px;
+	margin-top: 50px;
+
+	.header-links {
+		font-size: 34px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 25%;
+		color: black;
+
+		.header-link:hover {
+			text-decoration: underline 1px black;
+		}
+	}
+}
