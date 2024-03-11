@@ -21,11 +21,20 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const head = document.querySelector("head");
+const script = document.createElement("script");
+
+script.setAttribute("src", "https://kit.fontawesome.com/f65a9a96b2.js");
+head.appendChild(script);
+
 root.render(
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

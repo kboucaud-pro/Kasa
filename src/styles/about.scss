@@ -1,9 +1,23 @@
 @import "./_header.scss";
 @import "./_footer.scss";
+@import "./_banner.scss";
+@import "./_aboutCategory.scss";
 
 .content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 100%;
 
+	.shadow-box {
+		opacity: 0.3;
+	}
+
+	.about-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 60%;
+		margin-top: 50px;
+	}
 }

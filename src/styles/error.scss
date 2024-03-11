@@ -6,15 +6,17 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	height: 1000px;
 
 	.error-id {
 		color: #FF6060;
 		font-size: 280px;
+		margin-top: 100px;
+		margin-bottom: 100px;
 	} 
 
 	.error-text {
 		color: #FF6060;
 		font-size: 36px;
+		margin-bottom: 100px;
 	}
 }
