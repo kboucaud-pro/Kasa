@@ -1,7 +1,6 @@
 @import "./_header.scss";
 @import "./_banner.scss";
 @import "./_footer.scss";
-@import "./_place.scss";
 
 .content {
 	display: flex;
@@ -19,5 +18,40 @@
 		margin-bottom: 50px;
 		border-radius: 25px;
 		padding: 50px 50px 0px 50px;
+
+		.place {
+			width: 350px;
+			height: 350px;
+			background-color: #FF6060;
+			border-radius: 10px;
+			margin-bottom: 50px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+
+			img {
+				width: 90%;
+				min-height: 220px;
+				object-fit: cover;
+				margin: 10px;
+				padding-top: 10px;
+				border-radius: 25px;
+			}
+
+			.place-title {
+				font-size: 18px;
+				color: #FFF;
+				width: 80%;
+				text-align: left;
+				font-weight: 700;
+				padding-bottom: 25px;
+			}
+		}
+
+		a, a:link, a:visited, a:focus, a:hover, a:active {
+			color: #FFF;
+			text-decoration: none;
+		}
 	}
 }

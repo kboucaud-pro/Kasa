@@ -19,6 +19,10 @@ header .header-links .header-link:hover {
   -webkit-text-decoration: underline 1px black;
           text-decoration: underline 1px black;
 }
+header a, header a:link, header a:visited, header a:focus, header a:hover, header a:active {
+  color: black;
+  text-decoration: none;
+}
 
 .banner {
   width: 75%;
@@ -65,14 +69,6 @@ footer {
   width: 100%;
 }
 
-.place {
-  width: 350px;
-  height: 350px;
-  background-color: #FF6060;
-  border-radius: 10px;
-  margin-bottom: 50px;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -89,4 +85,36 @@ footer {
   margin-bottom: 50px;
   border-radius: 25px;
   padding: 50px 50px 0px 50px;
+}
+.content .place-list .place {
+  width: 350px;
+  height: 350px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .place-list .place img {
+  width: 90%;
+  min-height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px;
+  padding-top: 10px;
+  border-radius: 25px;
+}
+.content .place-list .place .place-title {
+  font-size: 18px;
+  color: #FFF;
+  width: 80%;
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+.content .place-list a, .content .place-list a:link, .content .place-list a:visited, .content .place-list a:focus, .content .place-list a:hover, .content .place-list a:active {
+  color: #FFF;
+  text-decoration: none;
 }/*# sourceMappingURL=home.css.map */

@@ -4,7 +4,9 @@ import Footer from "../components/footer";
 
 import "../styles/home.css";
 import Banner from "../components/banner";
-import Place from "../components/place";
+
+import placesData from "../assets/logements.json";
+import { Link } from "react-router-dom";
 
 function Home() {
 	return (
@@ -12,12 +14,16 @@ function Home() {
 			<Header />
 			<Banner />
 			<div className="place-list">
-				 <Place />
-				 <Place />
-				 <Place />
-				 <Place />
-				 <Place />
-				 <Place />
+				{
+					placesData.map(place => (
+						<Link to={"/place/" + place.id}>
+							<div className="place">
+								<img src={place.cover} alt={place.title} />
+								<span className="place-title">{place.title}</span>
+							</div>
+						</Link>
+					))
+				}
 			</div>
 			<Footer />
 		</div>

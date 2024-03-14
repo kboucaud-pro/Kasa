@@ -8,8 +8,8 @@ function Header () {
 		<header>
 			<img src={logo} alt="logo" />
 			<div className="header-links">
-				<Link to={'/'}><span className="header-link">Accueil</span></Link>
-				<Link to={'/about'}><span className="header-link">A propos</span></Link>
+				<Link to={'/'} className="header-link">Accueil</Link>
+				<Link to={'/about'} className="header-link">A propos</Link>
 			</div>
 		</header>
 	)
