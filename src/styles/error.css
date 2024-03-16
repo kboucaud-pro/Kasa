@@ -11,8 +11,8 @@ header .header-links {
   font-size: 34px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 25%;
+  justify-content: space-between;
+  width: 30%;
   color: black;
 }
 header .header-links .header-link:hover {

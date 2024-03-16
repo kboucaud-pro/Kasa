@@ -3,6 +3,7 @@
 	margin-bottom: 25px;
 	font-family: "Montserrat", sans-serif;
 	overflow: hidden;
+	display: block;
 
 	.category-title {
 		display: flex;
@@ -13,22 +14,38 @@
 		font-size: 24px;
 		font-weight: 700;
 		border-radius: 10px;
+
+		.chevron-up-animation {
+			transform-origin: center;
+			transform: rotate(0deg);
+			transition: transform 1s ease-in-out;
+		}
+
+		.chevron-down-animation {
+			transform-origin: center;
+			transform: rotate(180deg);
+			transition: transform 1s ease-in-out;
+		}
 	}
 
 	.category-description {
 		display: block;
 		background-color: #F6F6F6;
 		border-radius: 10px;
+		padding: 20px;
+
+		ul {
+			list-style: none;
+		}
 	}
 
 	.category-hidden {
 		transition: all 1s ease-in-out;
-		padding: 0px;
 		max-height: 0;
+		overflow: hidden;
 	}
 
 	.category-shown {
-		padding: 20px;
 		transition: all 1s ease-in-out;
 		max-height: 500px;
 	}

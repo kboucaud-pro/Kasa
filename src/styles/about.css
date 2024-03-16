@@ -11,8 +11,8 @@ header .header-links {
   font-size: 34px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 25%;
+  justify-content: space-between;
+  width: 30%;
   color: black;
 }
 header .header-links .header-link:hover {
@@ -74,6 +74,7 @@ footer {
   margin-bottom: 25px;
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
+  display: block;
 }
 .about-category .category-title {
   display: flex;
@@ -85,18 +86,31 @@ footer {
   font-weight: 700;
   border-radius: 10px;
 }
+.about-category .category-title .chevron-up-animation {
+  transform-origin: center;
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+.about-category .category-title .chevron-down-animation {
+  transform-origin: center;
+  transform: rotate(180deg);
+  transition: transform 1s ease-in-out;
+}
 .about-category .category-description {
   display: block;
   background-color: #F6F6F6;
   border-radius: 10px;
+  padding: 20px;
+}
+.about-category .category-description ul {
+  list-style: none;
 }
 .about-category .category-hidden {
   transition: all 1s ease-in-out;
-  padding: 0px;
   max-height: 0;
+  overflow: hidden;
 }
 .about-category .category-shown {
-  padding: 20px;
   transition: all 1s ease-in-out;
   max-height: 500px;
 }

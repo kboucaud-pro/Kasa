@@ -27,12 +27,6 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const head = document.querySelector("head");
-const script = document.createElement("script");
-
-script.setAttribute("src", "https://kit.fontawesome.com/f65a9a96b2.js");
-head.appendChild(script);
-
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
