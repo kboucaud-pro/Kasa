@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, redirect } from 'react-router-dom';
 
 import Home from './pages/home';
 import About from './pages/about';
 import Error from './pages/error';
 import Place from './pages/place';
 
+import placesData from './assets/logements.json';
+
 const router = createBrowserRouter([
+  {
+    path: "/error",
+    element: <Error />
+  },
   {
     path: "/",
     element: <Home />,
@@ -21,7 +27,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/place/:id",
-    element: <Place />
+    element: <Place />,
+    loader: async ({params}) => {
+      let placeId = params.id;
+
+      let currentPlace = undefined;
+      placesData.forEach((placeData) => {
+        if (placeData.id === placeId) {
+          currentPlace = placeData;
+        }
+      });
+    
+    
+      if (undefined === currentPlace){
+        return redirect('/error');
+      }
+
+      return placeId;
+    }
   }
 ]);
 

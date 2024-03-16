@@ -14,9 +14,9 @@ function getRatingStars(rating) {
 
 	for (let index = 0; index < 5; index++) {
 		if (rating > 0) {
-			starsHtml.push(<i class="fa-solid fa-star star-full"></i>);
+			starsHtml.push(<i className="fa-solid fa-star star-full"></i>);
 		} else {
-			starsHtml.push(<i class="fa-solid fa-star star-empty"></i>);
+			starsHtml.push(<i className="fa-solid fa-star star-empty"></i>);
 		}
 
 		rating--;
@@ -36,6 +36,7 @@ function Place() {
 			currentPlace = placeData;
 		}
 	});
+
 
 	return (
 		<div className="content">
