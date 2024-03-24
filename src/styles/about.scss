@@ -21,3 +21,12 @@
 		margin-top: 50px;
 	}
 }
+
+@media (max-width: 375px){
+	.content {
+
+		.about-list {
+			width: 90%;
+		}
+	}
+}

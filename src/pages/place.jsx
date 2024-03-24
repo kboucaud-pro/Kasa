@@ -43,16 +43,16 @@ function Place() {
 			<Header />
 			<div className="place-infos">
 				<div className="gallery"><img src={currentPlace.cover} alt={currentPlace.title} /></div>
-				<div className="title-location-owner">
-					<div className="title-location">
+				<div className="title-location-tags-rating-owner">
+					<div className="title-location-tags">
 						<h3>{currentPlace.title}</h3>
 						{currentPlace.location}
+						<ul>{currentPlace.tags.map((tag) => (<li>{tag}</li>))}</ul>
 					</div>
-					<div className="owner">{currentPlace.host.name}<img src={currentPlace.host.picture} alt={currentPlace.host.name} /></div>
-				</div>
-				<div className="tags-rating">
-					<ul>{currentPlace.tags.map((tag) => (<li>{tag}</li>))}</ul>
-					<span className="rating">{getRatingStars(currentPlace.rating).map((star) => (star))}</span>
+					<div className="rating-owner">
+						<div className="owner">{currentPlace.host.name}<img src={currentPlace.host.picture} alt={currentPlace.host.name} /></div>
+						<span className="rating">{getRatingStars(currentPlace.rating).map((star) => (star))}</span>
+					</div>
 				</div>
 				<div className="description-equipments">
 					<AboutCategory title="Description" description={currentPlace.description} />

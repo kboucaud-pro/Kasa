@@ -1,30 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 function AboutCategory({ title, description }) {
-	const displayAboutSection = (e) => {
-		var aboutSection = e.target.parentNode.nextSibling;
 
-		if (aboutSection.classList.contains("category-hidden")) {
-			aboutSection.classList.remove("category-hidden");
-			aboutSection.classList.add("category-shown");
-		} else if (aboutSection.classList.contains("category-shown")) {
-			aboutSection.classList.remove("category-shown");
-			aboutSection.classList.add("category-hidden");
-		}
+	const [categoryDisplay, setCategoryDisplay] = useState(false);
+	const [chevronDown, setChevronDown] = useState(true);
 
-		if (e.target.classList.contains("chevron-up-animation")){
-			e.target.classList.remove("chevron-up-animation");
-			e.target.classList.add("chevron-down-animation");
-		} else if (e.target.classList.contains("chevron-down-animation")){
-			e.target.classList.remove("chevron-down-animation");
-			e.target.classList.add("chevron-up-animation");
-		}
+	function handleDisplayClick() {
+		setCategoryDisplay(!categoryDisplay);
+		setChevronDown(!chevronDown);
 	}
+
+	let chevronClassName = "fa-solid fa-chevron-down "+ (chevronDown ? "chevron-up-animation" : "chevron-down-animation");
 
 	return (
 		<div className="about-category">
-			<span className="category-title">{title}<i onClick={displayAboutSection} className="fa-solid fa-chevron-down chevron-up-animation"></i></span>
-			<div className="category-hidden">
+			<span className="category-title">{title}<i onClick={handleDisplayClick} className={chevronClassName} ></i></span>
+			<div className={categoryDisplay ? "category-shown" : "category-hidden"}>
 				<span className="category-description">{description}</span>
 			</div>
 		</div>

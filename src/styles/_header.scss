@@ -27,3 +27,20 @@ header {
 		text-decoration: none;
 	}
 }
+
+@media (max-width: 375px) {
+	header {
+		margin-top: 20px;
+		width: 90%;
+
+		img {
+			width: 150px;
+		}
+
+		.header-links {
+			width: 50%;
+			font-size: 15px;
+			justify-content: space-around;
+		}
+	}
+}

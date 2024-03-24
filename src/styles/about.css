@@ -24,6 +24,20 @@ header a, header a:link, header a:visited, header a:focus, header a:hover, heade
   text-decoration: none;
 }
 
+@media (max-width: 375px) {
+  header {
+    margin-top: 20px;
+    width: 90%;
+  }
+  header img {
+    width: 150px;
+  }
+  header .header-links {
+    width: 50%;
+    font-size: 15px;
+    justify-content: space-around;
+  }
+}
 footer {
   color: white;
   background-color: black;
@@ -35,6 +49,16 @@ footer {
   width: 100%;
 }
 
+@media (max-width: 375px) {
+  footer {
+    justify-content: center;
+  }
+  footer .copyright-text {
+    width: 130px;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
 .banner {
   width: 75%;
   height: 225px;
@@ -54,11 +78,13 @@ footer {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .banner img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .banner span {
   position: absolute;
@@ -69,6 +95,17 @@ footer {
   width: 80%;
 }
 
+@media (max-width: 375px) {
+  .banner {
+    height: 110px;
+    width: 90%;
+    text-align: left;
+  }
+  .banner span {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
 .about-category {
   width: 100%;
   margin-bottom: 25px;
@@ -115,15 +152,14 @@ footer {
   max-height: 500px;
 }
 
-@keyframes showCategory {
-  0% {
-    height: 0px;
+@media (max-width: 375px) {
+  .about-category .category-title {
+    font-size: 18px;
   }
-  100% {
-    height: auto;
+  .about-category .category-description {
+    font-size: 16px;
   }
 }
-@keyframes hidCategory {}
 .content {
   display: flex;
   flex-direction: column;
@@ -139,4 +175,10 @@ footer {
   justify-content: space-between;
   width: 60%;
   margin-top: 50px;
+}
+
+@media (max-width: 375px) {
+  .content .about-list {
+    width: 90%;
+  }
 }/*# sourceMappingURL=about.css.map */

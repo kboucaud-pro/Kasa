@@ -2,12 +2,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: 'Montserrat';
+	font-family: "Montserrat";
 
 	.place-infos {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 
 		.gallery {
 			width: 80%;
@@ -20,75 +21,76 @@
 			}
 		}
 
-		.title-location-owner {
+		.title-location-tags-rating-owner {
+			width: 80%;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			width: 80%;
 
-			.title-location {
+			.title-location-tags {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 70%;
+
 				h3 {
 					font-size: 36px;
-					color: #FF6060;
+					color: #ff6060;
 					padding: 0px;
 					margin: 0px;
 				}
+
+				ul {
+					display: flex;
+					flex-direction: row;
+					max-width: 100%;
+					flex-wrap: wrap;
+					list-style: none;
+					padding: 0px;
+					gap: 10px;
+
+					li {
+						background-color: #ff6060;
+						color: #fff;
+						border-radius: 10px;
+						padding: 3px 30px 3px 30px;
+						margin-top: 10px;
+					}
+				}
 			}
 
-			.owner {
+			.rating-owner {
+				width: 30%;
 				display: flex;
-				flex-direction: row;
-				align-items: center;
-				width: 165px;
-				text-align: right;
-				color: #FF6060;
+				flex-direction: column;
+				align-items: flex-end;
+				justify-content: space-around;
 
-				img {
-					margin-left: 5px;
-					border-radius: 50%;
-					width: 65px;
-					height: 65px;
-					object-fit: cover;
-				}
-			}
-		}
+				.rating {
+					.star-full {
+						color: #ff6060;
+					}
 
-		.tags-rating {
-			width: 80%;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-
-			ul {
-				display: flex;
-				flex-direction: row;
-				width: 40%;
-				flex-wrap: wrap;
-				justify-content: flex-start;
-				list-style: none;
-				padding: 0px;
-
-				li {
-					background-color: #FF6060;
-					color: #FFF;
-					border-radius: 10px;
-					padding: 3px 30px 3px 30px;
-					margin-top: 10px;
+					.star-empty {
+						color: #e3e3e3;
+					}
 				}
 
-				li + li {
-					margin-left: 10px;
-				}
-			}
+				.owner {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					width: 165px;
+					text-align: right;
+					color: #ff6060;
 
-			.rating {
-				.star-full {
-					color: #FF6060;
-				}
-
-				.star-empty {
-					color: #E3E3E3;
+					img {
+						margin-left: 5px;
+						border-radius: 50%;
+						width: 65px;
+						height: 65px;
+						object-fit: cover;
+					}
 				}
 			}
 		}
@@ -98,9 +100,61 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			
+
 			.about-category {
 				width: 45%;
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.content {
+		.place-infos {
+			.gallery {
+				width: 80%;
+
+				img {
+					height: 250px;
+				}
+			}
+
+			.title-location-tags-rating-owner {
+				flex-direction: column;
+
+				.title-location-tags {
+					width: 100%;
+					font-size: 14px;
+
+					h3 {
+						font-size:18px;
+						font-weight: 500;
+					}
+
+					ul {
+						width: 100%;
+
+						li {
+							font-size: 10px;
+						}
+					}
+				}
+
+				.rating-owner {
+					flex-direction: row-reverse;
+					justify-content: space-between;
+					width: 100%;
+					align-items: center;
+				}
+			}
+
+			.description-equipments {
+				margin-top: 10px;
+				flex-direction: column;
+
+				.about-category {
+					width: 100%;
+				}
 			}
 		}
 	}

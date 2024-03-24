@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .content .place-infos .gallery {
   width: 80%;
@@ -19,65 +20,68 @@
      object-fit: cover;
   border-radius: 25px;
 }
-.content .place-infos .title-location-owner {
+.content .place-infos .title-location-tags-rating-owner {
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
 }
-.content .place-infos .title-location-owner .title-location h3 {
+.content .place-infos .title-location-tags-rating-owner .title-location-tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+.content .place-infos .title-location-tags-rating-owner .title-location-tags h3 {
   font-size: 36px;
-  color: #FF6060;
+  color: #ff6060;
   padding: 0px;
   margin: 0px;
 }
-.content .place-infos .title-location-owner .owner {
+.content .place-infos .title-location-tags-rating-owner .title-location-tags ul {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0px;
+  gap: 10px;
+}
+.content .place-infos .title-location-tags-rating-owner .title-location-tags ul li {
+  background-color: #ff6060;
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px 30px 3px 30px;
+  margin-top: 10px;
+}
+.content .place-infos .title-location-tags-rating-owner .rating-owner {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.content .place-infos .title-location-tags-rating-owner .rating-owner .rating .star-full {
+  color: #ff6060;
+}
+.content .place-infos .title-location-tags-rating-owner .rating-owner .rating .star-empty {
+  color: #e3e3e3;
+}
+.content .place-infos .title-location-tags-rating-owner .rating-owner .owner {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 165px;
   text-align: right;
-  color: #FF6060;
+  color: #ff6060;
 }
-.content .place-infos .title-location-owner .owner img {
+.content .place-infos .title-location-tags-rating-owner .rating-owner .owner img {
   margin-left: 5px;
   border-radius: 50%;
   width: 65px;
   height: 65px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.content .place-infos .tags-rating {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.content .place-infos .tags-rating ul {
-  display: flex;
-  flex-direction: row;
-  width: 40%;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style: none;
-  padding: 0px;
-}
-.content .place-infos .tags-rating ul li {
-  background-color: #FF6060;
-  color: #FFF;
-  border-radius: 10px;
-  padding: 3px 30px 3px 30px;
-  margin-top: 10px;
-}
-.content .place-infos .tags-rating ul li + li {
-  margin-left: 10px;
-}
-.content .place-infos .tags-rating .rating .star-full {
-  color: #FF6060;
-}
-.content .place-infos .tags-rating .rating .star-empty {
-  color: #E3E3E3;
 }
 .content .place-infos .description-equipments {
   width: 80%;
@@ -87,4 +91,43 @@
 }
 .content .place-infos .description-equipments .about-category {
   width: 45%;
+}
+
+@media (max-width: 375px) {
+  .content .place-infos .gallery {
+    width: 80%;
+  }
+  .content .place-infos .gallery img {
+    height: 250px;
+  }
+  .content .place-infos .title-location-tags-rating-owner {
+    flex-direction: column;
+  }
+  .content .place-infos .title-location-tags-rating-owner .title-location-tags {
+    width: 100%;
+    font-size: 14px;
+  }
+  .content .place-infos .title-location-tags-rating-owner .title-location-tags h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .content .place-infos .title-location-tags-rating-owner .title-location-tags ul {
+    width: 100%;
+  }
+  .content .place-infos .title-location-tags-rating-owner .title-location-tags ul li {
+    font-size: 10px;
+  }
+  .content .place-infos .title-location-tags-rating-owner .rating-owner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .content .place-infos .description-equipments {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .content .place-infos .description-equipments .about-category {
+    width: 100%;
+  }
 }/*# sourceMappingURL=place.css.map */

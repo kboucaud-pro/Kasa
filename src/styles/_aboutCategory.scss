@@ -51,14 +51,15 @@
 	}
 }
 
-@keyframes showCategory {
-	0% {
-		height: 0px;
-	} 100% {
-		height: auto;
+@media (max-width: 375px){
+	.about-category {
+
+		.category-title {
+			font-size: 18px;
+		}
+
+		.category-description {
+			font-size: 16px;
+		}
 	}
-}
-
-@keyframes hidCategory {
-
 }
