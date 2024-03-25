@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom"
 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import AboutCategory from "../components/about-category";
+import Carousel from "../components/carousel";
 
 import "../styles/place.css";
 
@@ -37,12 +38,13 @@ function Place() {
 		}
 	});
 
-
 	return (
 		<div className="content">
 			<Header />
 			<div className="place-infos">
-				<div className="gallery"><img src={currentPlace.cover} alt={currentPlace.title} /></div>
+				<div className="gallery">
+					<Carousel pictures={currentPlace.pictures} />
+				</div>
 				<div className="title-location-tags-rating-owner">
 					<div className="title-location-tags">
 						<h3>{currentPlace.title}</h3>

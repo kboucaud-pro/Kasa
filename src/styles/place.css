@@ -1,3 +1,36 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  align-items: center;
+}
+.carousel .currentPicture {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel .previousPictureButton {
+  position: absolute;
+  left: 25px;
+  z-index: 30;
+  font-size: 46px;
+  color: #FFFFFF;
+}
+.carousel .nextPictureButton {
+  position: absolute;
+  right: 25px;
+  z-index: 30;
+  font-size: 46px;
+  color: #FFFFFF;
+}
+
 .content {
   display: flex;
   flex-direction: column;
