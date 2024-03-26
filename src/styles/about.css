@@ -78,7 +78,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .banner img {
   -o-object-fit: cover;
@@ -166,7 +166,7 @@ footer {
   align-items: center;
   height: 100%;
 }
-.content .shadow-box {
+.content .about-shadow {
   opacity: 0.3;
 }
 .content .about-list {

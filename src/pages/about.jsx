@@ -13,7 +13,7 @@ function About() {
 			<Header />
 			<div className="banner">
 				<img src={aboutBackground} alt="about-background" />
-				<div className="shadow-box"></div>
+				<div className="shadow-box about-shadow"></div>
 			</div>
 			<div className="about-list">
 				<AboutCategory title="Fiabilité" description="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes au logement, et toutes les informations sont régulièrement vérifiées par nos équipes."/>

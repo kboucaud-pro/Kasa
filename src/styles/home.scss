@@ -10,8 +10,8 @@
 	.place-list {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
 		flex-wrap: wrap;
+		gap: 50px;
 		width: 80%;
 		background-color: #f6f6f6;
 		margin-top: 50px;
