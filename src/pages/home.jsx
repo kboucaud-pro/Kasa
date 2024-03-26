@@ -16,7 +16,7 @@ function Home() {
 			<div className="place-list">
 				{
 					placesData.map(place => (
-						<Link to={"/place/" + place.id}>
+						<Link key={place.id} to={"/place/" + place.id}>
 							<div className="place">
 								<img src={place.cover} alt={place.title} />
 								<span className="place-title">{place.title}</span>

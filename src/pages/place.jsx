@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom"
 
 import Header from "../components/header";
@@ -14,8 +14,9 @@ function getRatingStars(rating) {
 	let starsHtml = [];
 
 	for (let index = 0; index < 5; index++) {
+		let keyText = "star" + index;
 		if (rating > 0) {
-			starsHtml.push(<i className="fa-solid fa-star star-full"></i>);
+			starsHtml.push(<i className="fa-solid fa-star star-full" key={keyText}></i>);
 		} else {
 			starsHtml.push(<i className="fa-solid fa-star star-empty"></i>);
 		}
@@ -49,7 +50,7 @@ function Place() {
 					<div className="title-location-tags">
 						<h3>{currentPlace.title}</h3>
 						{currentPlace.location}
-						<ul>{currentPlace.tags.map((tag) => (<li>{tag}</li>))}</ul>
+						<ul>{currentPlace.tags.map((tag) => (<li key={tag}>{tag}</li>))}</ul>
 					</div>
 					<div className="rating-owner">
 						<div className="owner">{currentPlace.host.name}<img src={currentPlace.host.picture} alt={currentPlace.host.name} /></div>
@@ -58,7 +59,7 @@ function Place() {
 				</div>
 				<div className="description-equipments">
 					<AboutCategory title="Description" description={currentPlace.description} />
-					<AboutCategory title="Équipements" description={<ul>{currentPlace.equipments.map((equipment) => (<li>{equipment}</li>))}</ul>} />
+					<AboutCategory title="Équipements" description={<ul>{currentPlace.equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}</ul>} />
 				</div>
 			</div>
 			<Footer />

@@ -39,11 +39,11 @@ function Carousel(pictures) {
 
 	return (
 		<div className="carousel">
-			<img className="previousPicture previousPictureSlide" src={previousPicturePath} />
+			<img className="previousPicture previousPictureSlide" src={previousPicturePath} alt="previousPicture"/>
 			<span className="fa-solid fa-chevron-left previousPictureButton" onClick={clickPreviousPicture}></span>
-			<img className="currentPicture" src={currentPicturePath} />
+			<img className="currentPicture" src={currentPicturePath} alt="currentPicture"/>
 			<span className="fa-solid fa-chevron-right nextPictureButton" onClick={clickNextPicture}></span>
-			<img className="nextPicture" src={nextPicturePath} />
+			<img className="nextPicture" src={nextPicturePath} alt="nextPicture"/>
 		</div>
 	)
 }
