@@ -33,17 +33,11 @@ function Carousel(pictures) {
 		)
 	}
 
-	let previousPicturePath = currentPicture === 0 ? picturesArray[picturesArray.length - 1] : picturesArray[currentPicture - 1];
-	let currentPicturePath = picturesArray[currentPicture];
-	let nextPicturePath = currentPicture === picturesArray.length - 1 ? picturesArray[0] : picturesArray[currentPicture + 1];
-
 	return (
 		<div className="carousel">
-			<img className="previousPicture previousPictureSlide" src={previousPicturePath} alt="previousPicture"/>
 			<span className="fa-solid fa-chevron-left previousPictureButton" onClick={clickPreviousPicture}></span>
-			<img className="currentPicture" src={currentPicturePath} alt="currentPicture"/>
+			<img className="currentPicture" src={picturesArray[currentPicture]} alt="currentPicture"/>
 			<span className="fa-solid fa-chevron-right nextPictureButton" onClick={clickNextPicture}></span>
-			<img className="nextPicture" src={nextPicturePath} alt="nextPicture"/>
 		</div>
 	)
 }

@@ -8,10 +8,7 @@
   align-items: center;
 }
 .carousel .currentPicture {
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
   z-index: 10;
   -o-object-fit: cover;
      object-fit: cover;
@@ -21,16 +18,26 @@
   left: 25px;
   z-index: 30;
   font-size: 46px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .carousel .nextPictureButton {
   position: absolute;
   right: 25px;
   z-index: 30;
   font-size: 46px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
+@media (max-width: 375px) {
+  .carousel .previousPictureButton {
+    font-size: 24px;
+    left: 5px;
+  }
+  .carousel .nextPictureButton {
+    font-size: 24px;
+    right: 5px;
+  }
+}
 .content {
   display: flex;
   flex-direction: column;
