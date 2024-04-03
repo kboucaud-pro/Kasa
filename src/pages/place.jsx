@@ -18,7 +18,7 @@ function getRatingStars(rating) {
 		if (rating > 0) {
 			starsHtml.push(<i className="fa-solid fa-star star-full" key={keyText}></i>);
 		} else {
-			starsHtml.push(<i className="fa-solid fa-star star-empty"></i>);
+			starsHtml.push(<i className="fa-solid fa-star star-empty" key={keyText}></i>);
 		}
 
 		rating--;

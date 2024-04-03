@@ -11,7 +11,7 @@ function About() {
 	return (
 		<div className="content">
 			<Header />
-			<div className="banner">
+			<div className="banner about-banner">
 				<img src={aboutBackground} alt="about-background" />
 				<div className="shadow-box about-shadow"></div>
 			</div>

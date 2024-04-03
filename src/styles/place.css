@@ -13,6 +13,14 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.carousel .picture-count {
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 15;
+  left: 48%;
+}
 .carousel .previousPictureButton {
   position: absolute;
   left: 25px;
@@ -29,6 +37,9 @@
 }
 
 @media (max-width: 375px) {
+  .carousel .picture-count {
+    display: none;
+  }
   .carousel .previousPictureButton {
     font-size: 24px;
     left: 5px;

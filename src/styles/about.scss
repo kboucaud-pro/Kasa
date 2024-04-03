@@ -9,6 +9,10 @@
 	align-items: center;
 	height: 100%;
 
+	.about-banner {
+		width: 1240px;
+	}
+
 	.about-shadow {
 		opacity: 0.3;
 	}
@@ -24,6 +28,9 @@
 
 @media (max-width: 375px){
 	.content {
+		.about-banner {
+			width: 335px;
+		}
 
 		.about-list {
 			width: 90%;

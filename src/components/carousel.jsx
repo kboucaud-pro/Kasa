@@ -37,6 +37,7 @@ function Carousel(pictures) {
 		<div className="carousel">
 			<span className="fa-solid fa-chevron-left previousPictureButton" onClick={clickPreviousPicture}></span>
 			<img className="currentPicture" src={picturesArray[currentPicture]} alt="currentPicture"/>
+			<span className="picture-count">{currentPicture + 1}/{picturesArray.length}</span>
 			<span className="fa-solid fa-chevron-right nextPictureButton" onClick={clickNextPicture}></span>
 		</div>
 	)

@@ -48,7 +48,7 @@ header .inactive {
   flex-direction: row;
   align-items: center;
   position: relative;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 4px 0px #00000040;
   border-radius: 25px;
 }
 .banner .shadow-box {
@@ -61,8 +61,7 @@ header .inactive {
   opacity: 0.6;
 }
 .banner img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -165,8 +164,7 @@ footer {
 .content .banner-and-list .place-list-background .place-list a:active .place img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   z-index: 5;
 }
@@ -215,11 +213,11 @@ footer {
     width: 335px;
   }
   .content .banner-and-list .place-list-background .place-list a .place,
-  .content .banner-and-list .place-list-background .place-list a:link .place,
-  .content .banner-and-list .place-list-background .place-list a:visited .place,
-  .content .banner-and-list .place-list-background .place-list a:focus .place,
-  .content .banner-and-list .place-list-background .place-list a:hover .place,
-  .content .banner-and-list .place-list-background .place-list a:active .place {
+.content .banner-and-list .place-list-background .place-list a:link .place,
+.content .banner-and-list .place-list-background .place-list a:visited .place,
+.content .banner-and-list .place-list-background .place-list a:focus .place,
+.content .banner-and-list .place-list-background .place-list a:hover .place,
+.content .banner-and-list .place-list-background .place-list a:active .place {
     width: 335px;
   }
-}/*# sourceMappingURL=home.css.map */
+}

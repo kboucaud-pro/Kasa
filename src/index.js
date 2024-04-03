@@ -13,10 +13,6 @@ import placesData from './assets/logements.json';
 
 const router = createBrowserRouter([
   {
-    path: "/error",
-    element: <Error />
-  },
-  {
     path: "/",
     element: <Home />,
     errorElement: <Error />
